@@ -148,9 +148,21 @@ export const NewsFeed: React.FC<NewsFeedProps> = ({ searchText = "" }) => {
                     </div>
 
                     {/* News Headline */}
-                    <p className="text-xs font-semibold text-white leading-tight group-hover:text-cmd-primary transition-colors">
-                      {news.headline}
-                    </p>
+                    {news.url ? (
+                      <a
+                        href={news.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs font-semibold text-white leading-tight hover:text-cmd-primary hover:underline transition-colors block cursor-pointer"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {news.headline}
+                      </a>
+                    ) : (
+                      <p className="text-xs font-semibold text-white leading-tight group-hover:text-cmd-primary transition-colors">
+                        {news.headline}
+                      </p>
+                    )}
 
                     {/* Underlying contextual impact */}
                     <p className="text-[10px] text-gray-400 leading-snug">

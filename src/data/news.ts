@@ -8,7 +8,8 @@ export const mockNews: NewsItem[] = [
     timestamp: "10 mins ago",
     source: "Bloomberg Technology",
     importanceScore: 0.98,
-    impactAnalysis: "Accelerates autonomous logic capabilities by 3.4x over standard models, enabling deep engineering automation."
+    impactAnalysis: "Accelerates autonomous logic capabilities by 3.4x over standard models, enabling deep engineering automation.",
+    url: "https://openai.com/news/"
   },
   {
     id: "news-02",
@@ -17,7 +18,8 @@ export const mockNews: NewsItem[] = [
     timestamp: "28 mins ago",
     source: "VentureBeat",
     importanceScore: 0.85,
-    impactAnalysis: "Addresses corporate data localization hurdles, boosting B2B platform adoption across banking sectors."
+    impactAnalysis: "Addresses corporate data localization hurdles, boosting B2B platform adoption across banking sectors.",
+    url: "https://www.anthropic.com/news"
   },
   {
     id: "news-03",
@@ -26,7 +28,8 @@ export const mockNews: NewsItem[] = [
     timestamp: "1 hr ago",
     source: "EE Times",
     importanceScore: 0.92,
-    impactAnalysis: "Reduces thermal throttling at scale, lowering average hyper-scale data center operational expenditure by 8%."
+    impactAnalysis: "Reduces thermal throttling at scale, lowering average hyper-scale data center operational expenditure by 8%.",
+    url: "https://www.nvidia.com"
   },
   {
     id: "news-04",
@@ -35,7 +38,8 @@ export const mockNews: NewsItem[] = [
     timestamp: "2 hrs ago",
     source: "TechCrunch",
     importanceScore: 0.89,
-    impactAnalysis: "Validates continuing search paradigm shifts, scaling computing resource pipeline allocations."
+    impactAnalysis: "Validates continuing search paradigm shifts, scaling computing resource pipeline allocations.",
+    url: "https://www.perplexity.ai"
   },
   {
     id: "news-05",
@@ -44,7 +48,8 @@ export const mockNews: NewsItem[] = [
     timestamp: "3 hrs ago",
     source: "Mistral Blog",
     importanceScore: 0.87,
-    impactAnalysis: "Provides local code inference parity with cloud services on single workstation developer platforms."
+    impactAnalysis: "Provides local code inference parity with cloud services on single workstation developer platforms.",
+    url: "https://mistral.ai"
   },
   {
     id: "news-06",
@@ -53,7 +58,8 @@ export const mockNews: NewsItem[] = [
     timestamp: "4 hrs ago",
     source: "Meta AI Inside",
     importanceScore: 0.96,
-    impactAnalysis: "Creates highly dense, fully open-weights models set to challenge closed proprietary architectures."
+    impactAnalysis: "Creates highly dense, fully open-weights models set to challenge closed proprietary architectures.",
+    url: "https://ai.meta.com"
   },
   {
     id: "news-07",

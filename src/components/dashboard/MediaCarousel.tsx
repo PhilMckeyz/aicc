@@ -76,27 +76,56 @@ export const MediaCarousel: React.FC<MediaCarouselProps> = ({ searchText = "" })
               className="w-[280px] shrink-0 bg-[#0B0F14]/45 border border-cmd-border/60 hover:border-cmd-primary/60 hover:bg-[#131A22] p-2.5 rounded flex flex-col justify-between transition-all group relative cursor-pointer"
             >
               {/* Thumbnail representation */}
-              <div className="aspect-video w-full bg-cmd-border/40 relative rounded overflow-hidden">
-                <img 
-                  src={pod.thumbnailUrl} 
-                  alt={pod.title} 
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
-                />
-                
-                {/* Embedded Glassmorphic Play Button Overlay */}
-                <div className="absolute inset-0 bg-black/45 flex items-center justify-center group-hover:bg-black/25 transition-all">
-                  <div className="w-9 h-9 bg-[#131A22]/80 group-hover:bg-cmd-primary border border-cmd-border group-hover:border-cmd-primary rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 transform group-hover:scale-110">
-                    <Play className="w-4 h-4 text-white group-hover:text-[#0B0F14] ml-0.5 fill-current" />
+              {pod.url ? (
+                <a
+                  href={pod.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="aspect-video w-full bg-cmd-border/40 relative rounded overflow-hidden block"
+                >
+                  <img 
+                    src={pod.thumbnailUrl} 
+                    alt={pod.title} 
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                  />
+                  
+                  {/* Embedded Glassmorphic Play Button Overlay */}
+                  <div className="absolute inset-0 bg-black/45 flex items-center justify-center group-hover:bg-black/25 transition-all">
+                    <div className="w-9 h-9 bg-[#131A22]/80 group-hover:bg-cmd-primary border border-cmd-border group-hover:border-cmd-primary rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 transform group-hover:scale-110">
+                      <Play className="w-4 h-4 text-white group-hover:text-[#0B0F14] ml-0.5 fill-current" />
+                    </div>
                   </div>
-                </div>
 
-                {/* Duration Badge */}
-                <span className="absolute bottom-1.5 right-1.5 bg-[#0B0F14]/85 text-white font-mono text-[8.5px] px-1.5 py-0.5 rounded border border-cmd-border/45 flex items-center gap-1 font-bold">
-                  <Clock className="w-2.5 h-2.5 text-cmd-primary" />
-                  {pod.duration}
-                </span>
-              </div>
+                  {/* Duration Badge */}
+                  <span className="absolute bottom-1.5 right-1.5 bg-[#0B0F14]/85 text-white font-mono text-[8.5px] px-1.5 py-0.5 rounded border border-cmd-border/45 flex items-center gap-1 font-bold">
+                    <Clock className="w-2.5 h-2.5 text-cmd-primary" />
+                    {pod.duration}
+                  </span>
+                </a>
+              ) : (
+                <div className="aspect-video w-full bg-cmd-border/40 relative rounded overflow-hidden">
+                  <img 
+                    src={pod.thumbnailUrl} 
+                    alt={pod.title} 
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                  />
+                  
+                  {/* Embedded Glassmorphic Play Button Overlay */}
+                  <div className="absolute inset-0 bg-black/45 flex items-center justify-center group-hover:bg-black/25 transition-all">
+                    <div className="w-9 h-9 bg-[#131A22]/80 group-hover:bg-cmd-primary border border-cmd-border group-hover:border-cmd-primary rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 transform group-hover:scale-110">
+                      <Play className="w-4 h-4 text-white group-hover:text-[#0B0F14] ml-0.5 fill-current" />
+                    </div>
+                  </div>
+
+                  {/* Duration Badge */}
+                  <span className="absolute bottom-1.5 right-1.5 bg-[#0B0F14]/85 text-white font-mono text-[8.5px] px-1.5 py-0.5 rounded border border-cmd-border/45 flex items-center gap-1 font-bold">
+                    <Clock className="w-2.5 h-2.5 text-cmd-primary" />
+                    {pod.duration}
+                  </span>
+                </div>
+              )}
 
               {/* Text metadata */}
               <div className="mt-2.5 space-y-1.5">
@@ -104,9 +133,20 @@ export const MediaCarousel: React.FC<MediaCarouselProps> = ({ searchText = "" })
                   <span>{pod.source}</span>
                   <span className="text-gray-400">LECTURE SPEC</span>
                 </div>
-                <h4 className="text-[11px] font-black text-white leading-tight group-hover:text-cmd-primary line-clamp-2 transition-colors">
-                  {pod.title}
-                </h4>
+                {pod.url ? (
+                  <a
+                    href={pod.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-black text-white leading-tight hover:text-cmd-primary hover:underline line-clamp-2 transition-colors block cursor-pointer"
+                  >
+                    {pod.title}
+                  </a>
+                ) : (
+                  <h4 className="text-[11px] font-black text-white leading-tight group-hover:text-cmd-primary line-clamp-2 transition-colors">
+                    {pod.title}
+                  </h4>
+                )}
                 <p className="text-[10px] text-gray-400 line-clamp-2 leading-tight">
                   {pod.summary}
                 </p>

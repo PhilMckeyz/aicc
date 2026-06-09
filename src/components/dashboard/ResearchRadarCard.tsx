@@ -56,15 +56,27 @@ export const ResearchRadarCard: React.FC<ResearchRadarCardProps> = ({ searchText
             {selectedPaper ? (
               <div className="space-y-1">
                 <div className="flex justify-between items-start">
-                  <span className="text-[9px] font-mono text-[#00D4FF] bg-[#00D4FF]/10 px-1.5 py-0.5 rounded">
-                    arXiv:{selectedPaper.arxivId}
-                  </span>
+                  <a
+                    href={`https://arxiv.org/abs/${selectedPaper.arxivId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[9px] font-mono text-[#00D4FF] bg-[#00D4FF]/10 px-1.5 py-0.5 rounded hover:bg-[#00D4FF]/25 hover:underline transition-all block"
+                  >
+                    arXiv:{selectedPaper.arxivId} ↗
+                  </a>
                   <span className="text-[9px] text-gray-400 font-mono">
                     Impact: {selectedPaper.impactScore}/5
                   </span>
                 </div>
                 <h5 className="text-[11px] font-black text-white hover:text-cmd-primary transition-colors leading-tight truncate">
-                  {selectedPaper.title}
+                  <a
+                    href={`https://arxiv.org/abs/${selectedPaper.arxivId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {selectedPaper.title}
+                  </a>
                 </h5>
                 <p className="text-[10px] text-gray-400 leading-tight line-clamp-3">
                   {selectedPaper.summary}

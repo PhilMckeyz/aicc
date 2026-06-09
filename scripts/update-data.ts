@@ -165,7 +165,7 @@ ${JSON.stringify(context, null, 2)}
 
 You must synthesize this data and produce a SINGLE JSON object containing arrays for our 8 sections. Follow these schema guidelines:
 
-1. "news": Array of NewsItem objects. Max 15 items. Map real stories from Hacker News or syntheses of recent news.
+1. "news": Array of NewsItem objects. Max 15 items. Map real stories from Hacker News (using their URLs) or synthesize recent news.
    Interface:
    export interface NewsItem {
      id: string; // prefix e.g., 'news-01'
@@ -175,6 +175,7 @@ You must synthesize this data and produce a SINGLE JSON object containing arrays
      source: string; // e.g., 'Hacker News', 'TechCrunch'
      importanceScore: number; // 0 to 1
      impactAnalysis: string; // 1-2 sentence technical impact analysis
+     url?: string; // Must map the exact URL from the Hacker News story context or related tech news page
    }
 
 2. "watchlist": Array of CompanyWatchlistItem objects. Exactly 10 items.
@@ -255,6 +256,7 @@ You must synthesize this data and produce a SINGLE JSON object containing arrays
      duration: string; // e.g. '42:15'
      summary: string;
      source: string; // e.g., 'Lex Fridman Podcast', 'The AI Podcast'
+     url?: string; // A URL link to the YouTube video or podcast episode page
    }
 
 Return ONLY a single valid JSON object. Do not include markdown code block formatting in your response. Do not wrap the JSON in \`\`\`json. Return pure JSON text.

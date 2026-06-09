@@ -6,6 +6,7 @@ export interface NewsItem {
   source: string;
   importanceScore: number; // 0 to 1
   impactAnalysis: string;
+  url?: string;
 }
 
 export interface CompanyWatchlistItem {
@@ -72,6 +73,7 @@ export interface MediaPodcastItem {
   duration: string;
   summary: string;
   source: string;
+  url?: string;
 }
 
 export interface CommandSuggestion {

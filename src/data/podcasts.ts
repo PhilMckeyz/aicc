@@ -8,7 +8,8 @@ export const mockPodcasts: MediaPodcastItem[] = [
     speaker: "Harrison Chase & Jerry Liu",
     duration: "42:15",
     summary: "A deep conversation on the engineering mechanics of state synchronization across active multi-agent browser loops.",
-    source: "The AI Podcast"
+    source: "The AI Podcast",
+    url: "https://www.youtube.com"
   },
   {
     id: "pod-02",
@@ -17,7 +18,8 @@ export const mockPodcasts: MediaPodcastItem[] = [
     speaker: "Dr. Lisa Su & Jensen Huang",
     duration: "18:30",
     summary: "Analyzing the physical limits of sub-2nm node architectures and alternative cooling loops in scale clusters.",
-    source: "Tech Crunch AI Digest"
+    source: "Tech Crunch AI Digest",
+    url: "https://www.youtube.com"
   },
   {
     id: "pod-03",
@@ -26,7 +28,8 @@ export const mockPodcasts: MediaPodcastItem[] = [
     speaker: "Brad Gerstner & Sarah Tavel",
     duration: "35:10",
     summary: "Breaking down capital deployment across consumer software layers vs raw computational substrate structures.",
-    source: "Bloomberg Alpha"
+    source: "Bloomberg Alpha",
+    url: "https://www.bloomberg.com"
   },
   {
     id: "pod-04",
@@ -35,7 +38,8 @@ export const mockPodcasts: MediaPodcastItem[] = [
     speaker: "Ilya Sutskever",
     duration: "1:05:22",
     summary: "An expansive look at mathematical reasoning as a methodology to generate high-fidelity, clean synthetic validation steps.",
-    source: "Lex Fridman Series"
+    source: "Lex Fridman Series",
+    url: "https://lexfridman.com"
   },
   {
     id: "pod-05",
