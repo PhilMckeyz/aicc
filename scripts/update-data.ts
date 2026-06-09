@@ -105,7 +105,8 @@ async function fetchArxiv() {
 // Helper to fetch trending GitHub repositories
 async function fetchGithubRepos() {
   try {
-    const res = await fetch('https://api.github.com/search/repositories?q=stars:>2000+topic:llm+OR+topic:generative-ai+OR+topic:ai&sort=stars&order=desc', {
+    const query = 'stars:>2000 topic:artificial-intelligence';
+    const res = await fetch(`https://api.github.com/search/repositories?q=${encodeURIComponent(query)}&sort=stars&order=desc`, {
       headers: {
         'User-Agent': 'Node-Fetch-Script',
         'Accept': 'application/vnd.github.v3+json'
@@ -262,21 +263,42 @@ You must synthesize this data and produce a SINGLE JSON object containing arrays
 Return ONLY a single valid JSON object. Do not include markdown code block formatting in your response. Do not wrap the JSON in \`\`\`json. Return pure JSON text.
 `;
 
-  try {
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
-      contents: prompt,
-      config: {
-        responseMimeType: 'application/json',
+  let payload: any;
+  let attempts = 0;
+  const maxAttempts = 3;
+  
+  while (attempts < maxAttempts) {
+    try {
+      attempts++;
+      console.log(`🧠 Invoking Gemini for intelligent synthesis (attempt ${attempts}/${maxAttempts})...`);
+      const response = await ai.models.generateContent({
+        model: 'gemini-2.5-flash',
+        contents: prompt,
+        config: {
+          responseMimeType: 'application/json',
+        }
+      });
+
+      const text = response.text;
+      if (!text) {
+        throw new Error("Empty response from Gemini API");
       }
-    });
 
-    const text = response.text;
-    if (!text) {
-      throw new Error("Empty response from Gemini API");
+      payload = JSON.parse(text);
+      break; // Success, break out of loop
+    } catch (err: any) {
+      console.warn(`⚠️ Gemini API call attempt ${attempts} failed: ${err.message || err}`);
+      if (attempts >= maxAttempts) {
+        console.error("CRITICAL: All Gemini API call attempts failed.");
+        throw err;
+      }
+      const delay = attempts * 5000;
+      console.log(`Retrying in ${delay / 1000} seconds...`);
+      await new Promise(resolve => setTimeout(resolve, delay));
     }
+  }
 
-    const payload = JSON.parse(text);
+  try {
 
     // 3. Write data to typescript files
     const dataDir = path.join(process.cwd(), 'src/data');

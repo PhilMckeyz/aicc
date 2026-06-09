@@ -2,279 +2,153 @@ import { NewsItem } from '../types';
 
 export const mockNews: NewsItem[] = [
   {
-    id: "news-01",
-    headline: "OpenAI releases new reasoning-focused model series designed for complex logic",
-    category: "Models",
-    timestamp: "10 mins ago",
-    source: "Bloomberg Technology",
-    importanceScore: 0.98,
-    impactAnalysis: "Accelerates autonomous logic capabilities by 3.4x over standard models, enabling deep engineering automation.",
-    url: "https://openai.com/news/"
+    "id": "news-01",
+    "headline": "Where is the AI jobs crisis?",
+    "category": "Enterprise",
+    "timestamp": "31 mins ago",
+    "source": "Hacker News",
+    "importanceScore": 1,
+    "impactAnalysis": "This article discusses the current state of AI's impact on employment, analyzing whether widespread job displacement is occurring as predicted.",
+    "url": "https://www.apollo.com/wealth/the-daily-spark/where-is-the-ai-jobs-crisis"
   },
   {
-    id: "news-02",
-    headline: "Anthropic launches Enterprise Workspaces with advanced workspace memory controls",
-    category: "Enterprise",
-    timestamp: "28 mins ago",
-    source: "VentureBeat",
-    importanceScore: 0.85,
-    impactAnalysis: "Addresses corporate data localization hurdles, boosting B2B platform adoption across banking sectors.",
-    url: "https://www.anthropic.com/news"
+    "id": "news-02",
+    "headline": "AI profitability is mathematically impossible",
+    "category": "Research",
+    "timestamp": "32 mins ago",
+    "source": "Hacker News",
+    "importanceScore": 0.15,
+    "impactAnalysis": "A controversial piece arguing that the fundamental economics of AI development and deployment may not lead to sustainable profitability for many ventures.",
+    "url": "https://old.reddit.com/r/BetterOffline/comments/1tzwnhi/ai_profitability_is_mathematically_impossible/"
   },
   {
-    id: "news-03",
-    headline: "NVIDIA announces next-generation Blackwell architecture cooling optimization partnerships",
-    category: "Research",
-    timestamp: "1 hr ago",
-    source: "EE Times",
-    importanceScore: 0.92,
-    impactAnalysis: "Reduces thermal throttling at scale, lowering average hyper-scale data center operational expenditure by 8%.",
-    url: "https://www.nvidia.com"
+    "id": "news-03",
+    "headline": "Broadcom 20GW Strategic AI Platform Raises $35 Billion From Apollo",
+    "category": "Enterprise",
+    "timestamp": "19 mins ago",
+    "source": "Hacker News",
+    "importanceScore": 0.03,
+    "impactAnalysis": "Broadcom's massive funding round highlights significant investor confidence in large-scale AI infrastructure and specialized hardware platforms.",
+    "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-apollo-and-blackstone-establish-landmark-strategic"
   },
   {
-    id: "news-04",
-    headline: "Perplexity raises $250M at new valuation to scale multi-modal indexing arrays",
-    category: "Startups",
-    timestamp: "2 hrs ago",
-    source: "TechCrunch",
-    importanceScore: 0.89,
-    impactAnalysis: "Validates continuing search paradigm shifts, scaling computing resource pipeline allocations.",
-    url: "https://www.perplexity.ai"
+    "id": "news-04",
+    "headline": "Linux Foundation launches Tokenomics Foundation for AI token cost management",
+    "category": "Enterprise",
+    "timestamp": "52 mins ago",
+    "source": "Hacker News",
+    "importanceScore": 0.05,
+    "impactAnalysis": "The new foundation addresses the critical issue of managing costs associated with AI tokens, aiming for more transparent and efficient AI resource allocation.",
+    "url": "https://www.tokeneconomics.com/about/"
   },
   {
-    id: "news-05",
-    headline: "Mistral releases new light open-weights model targeting 12B parameter efficiency edge",
-    category: "Models",
-    timestamp: "3 hrs ago",
-    source: "Mistral Blog",
-    importanceScore: 0.87,
-    impactAnalysis: "Provides local code inference parity with cloud services on single workstation developer platforms.",
-    url: "https://mistral.ai"
+    "id": "news-05",
+    "headline": "Yann LeCun: World Models: Enabling the Next AI Revolution [video]",
+    "category": "Research",
+    "timestamp": "1 hr ago",
+    "source": "Hacker News",
+    "importanceScore": 0.05,
+    "impactAnalysis": "Yann LeCun's insights on world models point towards a future of more intelligent and autonomous AI systems capable of understanding and interacting with their environment.",
+    "url": "https://www.youtube.com/watch?v=72Xj8k5WQX4"
   },
   {
-    id: "news-06",
-    headline: "Meta releases Llama-4 training schedule, targets 400K GPU clustered infrastructure",
-    category: "Models",
-    timestamp: "4 hrs ago",
-    source: "Meta AI Inside",
-    importanceScore: 0.96,
-    impactAnalysis: "Creates highly dense, fully open-weights models set to challenge closed proprietary architectures.",
-    url: "https://ai.meta.com"
+    "id": "news-06",
+    "headline": "Lore – LLM proxy for coding agent context and memory management",
+    "category": "Products",
+    "timestamp": "18 mins ago",
+    "source": "Hacker News",
+    "importanceScore": 0.06,
+    "impactAnalysis": "New tools like Lore are emerging to solve critical challenges in managing context and memory for AI coding agents, crucial for complex projects.",
+    "url": "https://withlore.ai/"
   },
   {
-    id: "news-07",
-    headline: "xAI deploys 100,000 Liquid-Cooled H100 cluster in Colossus supercomputing base",
-    category: "Startups",
-    timestamp: "5 hrs ago",
-    source: "The Information",
-    importanceScore: 0.94,
-    impactAnalysis: "Reduces basic LLM training duration of multi-trillion token models down to a matter of weeks."
+    "id": "news-07",
+    "headline": "TCS Might Replace Humans with AI Agents",
+    "category": "Enterprise",
+    "timestamp": "28 mins ago",
+    "source": "Hacker News",
+    "importanceScore": 0.03,
+    "impactAnalysis": "This news highlights ongoing concerns and trends where large enterprises are exploring the potential for AI agents to automate roles traditionally held by human employees.",
+    "url": "https://www.gulte.com/trends/415158/big-news-tcs-might-replace-humans-with-ai-agents"
   },
   {
-    id: "news-08",
-    headline: "EU AI Act enters active phase of compliance audit for Tier-1 frontier models",
-    category: "Research",
-    timestamp: "6 hrs ago",
-    source: "Financial Times",
-    importanceScore: 0.90,
-    impactAnalysis: "Establishes mandatory reporting requirements, introducing legal hurdles for model releases."
+    "id": "news-08",
+    "headline": "Apple Wins Consumer AI by Default",
+    "category": "Enterprise",
+    "timestamp": "14 mins ago",
+    "source": "Hacker News",
+    "importanceScore": 0.02,
+    "impactAnalysis": "This piece suggests Apple's integrated ecosystem and user base position it uniquely to dominate the consumer-facing AI market, potentially without directly competing on raw model performance.",
+    "url": "https://spyglass.org/siri-ai/"
   },
   {
-    id: "news-09",
-    headline: "Google DeepMind showcases AlphaFold-3 applications in molecular catalyst design",
-    category: "Research",
-    timestamp: "8 hrs ago",
-    source: "Nature",
-    importanceScore: 0.93,
-    impactAnalysis: "Spurs massive biotech-AI synergy, reducing preliminary compound screening times from months to hours."
+    "id": "news-09",
+    "headline": "CEOs Who Think AI Replaces Their Employees Are Just Bad CEOs",
+    "category": "Enterprise",
+    "timestamp": "14 mins ago",
+    "source": "Hacker News",
+    "importanceScore": 0.02,
+    "impactAnalysis": "A critical perspective arguing that effective leadership in the AI era involves augmenting human capabilities rather than solely focusing on replacement.",
+    "url": "https://www.techdirt.com/2026/06/09/ceos-who-think-ai-replaces-their-employees-are-just-bad-ceos/"
   },
   {
-    id: "news-10",
-    headline: "Cognition AI partners with Microsoft to scale automated software engineer arrays",
-    category: "Agents",
-    timestamp: "11 hrs ago",
-    source: "Wired",
-    importanceScore: 0.88,
-    impactAnalysis: "Demonstrates enterprise-grade coding agents completing complex multi-file pull requests autonomously."
+    "id": "news-10",
+    "headline": "Show HN: I built a social-first search(X, Reddit, TikTok) cause Google is boring",
+    "category": "Products",
+    "timestamp": "25 mins ago",
+    "source": "Hacker News",
+    "importanceScore": 0.06,
+    "impactAnalysis": "A novel approach to search leveraging social media platforms, indicating a shift towards more dynamic and community-driven information discovery with AI.",
+    "url": "https://www.bluhe.ai/"
   },
   {
-    id: "news-11",
-    headline: "Figure AI humanoid robot executes sub-millimeter precision tasks on automotive lines",
-    category: "Robotics",
-    timestamp: "12 hrs ago",
-    source: "IEEE Spectrum",
-    importanceScore: 0.91,
-    impactAnalysis: "Bridges digital intelligence and industrial automation, accelerating factory deployment timelines."
+    "id": "news-11",
+    "headline": "Show HN: Nodea, an open-source AI canvas for working through complex projects",
+    "category": "Startups",
+    "timestamp": "15 mins ago",
+    "source": "Hacker News",
+    "importanceScore": 0.05,
+    "impactAnalysis": "Nodea introduces an innovative open-source AI canvas, providing visual tools to manage and conceptualize complex AI development projects.",
+    "url": "https://nodea.ai/demo"
   },
   {
-    id: "news-12",
-    headline: "Cohere debuts Ayaya multilingual embeddings targeting 100+ native regional dialects",
-    category: "Enterprise",
-    timestamp: "15 hrs ago",
-    source: "Reuters",
-    importanceScore: 0.83,
-    impactAnalysis: "Enhances localized search and customer service efficiency across international enterprise networks."
+    "id": "news-12",
+    "headline": "Is there such a thing as \"skill\" in interacting with AI?",
+    "category": "Agents",
+    "timestamp": "45 mins ago",
+    "source": "Hacker News",
+    "importanceScore": 0.02,
+    "impactAnalysis": "This discussion explores the evolving role of human-AI interaction, suggesting that effective prompt engineering and AI utilization requires distinct user skills.",
+    "url": "https://news.ycombinator.com/item?id=48465155"
   },
   {
-    id: "news-13",
-    headline: "Suno AI introduces localized style vocal stems with multitrack editing functions",
-    category: "Startups",
-    timestamp: "18 hrs ago",
-    source: "Music Business Daily",
-    importanceScore: 0.80,
-    impactAnalysis: "Unlocks synthetic creative asset workflows for corporate media and production houses."
+    "id": "news-13",
+    "headline": "Why AI code optimization needs production-grounded benchmarks",
+    "category": "Research",
+    "timestamp": "28 mins ago",
+    "source": "Hacker News",
+    "importanceScore": 0.02,
+    "impactAnalysis": "The importance of practical, real-world benchmarks for evaluating AI code optimization tools is emphasized to ensure their efficacy in production environments.",
+    "url": "https://www.datadoghq.com/blog/ai/production-grounded-code-optimization/"
   },
   {
-    id: "news-14",
-    headline: "Scale AI wins federal intelligence platform modernization contract worth $120M",
-    category: "Enterprise",
-    timestamp: "20 hrs ago",
-    source: "DefenseOne",
-    importanceScore: 0.86,
-    impactAnalysis: "Reinforces government demand for military-grade data annotation and agent verification engines."
+    "id": "news-14",
+    "headline": "Show HN: Joka.work – AI-native ticketmaxxing to replace Jira in the agentic era",
+    "category": "Products",
+    "timestamp": "24 mins ago",
+    "source": "Hacker News",
+    "importanceScore": 0.02,
+    "impactAnalysis": "New AI-native platforms like Joka.work aim to disrupt traditional project management tools by leveraging AI agents for enhanced efficiency and automation.",
+    "url": "https://joka.work"
   },
   {
-    id: "news-15",
-    headline: "Physical Intelligence raises $100M from Bezos and OpenAI to build universal robot brains",
-    category: "Robotics",
-    timestamp: "23 hrs ago",
-    source: "PitchBook",
-    importanceScore: 0.88,
-    impactAnalysis: "Focuses on zero-shot robotic manipulation across diverse multi-hardware legacy platforms."
-  },
-  {
-    id: "news-16",
-    headline: "Hugging Face surpasses 1.5 million models uploaded on open-source community repository",
-    category: "Startups",
-    timestamp: "1 day ago",
-    source: "Hugging Feed",
-    importanceScore: 0.82,
-    impactAnalysis: "Solidifies open source centralization, proving decentralized compute pipelines are highly active."
-  },
-  {
-    id: "news-17",
-    headline: "DeepSeek introduces reinforcement learning model trained with extreme cost efficiency",
-    category: "Models",
-    timestamp: "1 day ago",
-    source: "Hacker News",
-    importanceScore: 0.95,
-    impactAnalysis: "Proves that reasoning capabilities can be unlocked with post-training RL, cutting pre-training spend."
-  },
-  {
-    id: "news-18",
-    headline: "Apple introduces localized visual context engine running fully on-device on M-series chips",
-    category: "Enterprise",
-    timestamp: "1 day ago",
-    source: "MacRumors",
-    importanceScore: 0.84,
-    impactAnalysis: "Expands privacy-preserving context layers without relying on active internet network structures."
-  },
-  {
-    id: "news-19",
-    headline: "TSMC reports 98% yield rate on custom 3nm Silicon accelerators tailored for AI workloads",
-    category: "Research",
-    timestamp: "1 day ago",
-    source: "Nikkei Asia",
-    importanceScore: 0.91,
-    impactAnalysis: "Guarantees robust chip supply for tier-1 players, averting major silicon deficit scenarios."
-  },
-  {
-    id: "news-20",
-    headline: "Pika Labs upgrades video generation architecture to 2.0 with spatial prompt controls",
-    category: "Startups",
-    timestamp: "2 days ago",
-    source: "Variety",
-    importanceScore: 0.78,
-    impactAnalysis: "Improves physics coherence in generative content, making real-time asset generation highly viable."
-  },
-  {
-    id: "news-21",
-    headline: "Stanford releases DSPy 2.6 updating automated assertion compiler logic arrays",
-    category: "Research",
-    timestamp: "2 days ago",
-    source: "Stanford AI News",
-    importanceScore: 0.86,
-    impactAnalysis: "Shifts agent development from prompt hackery to systematic compilation and continuous optimization."
-  },
-  {
-    id: "news-22",
-    headline: "AWS launches Bedrock multi-agent orchestration service with automatic guardrails",
-    category: "Agents",
-    timestamp: "2 days ago",
-    source: "AWS Press",
-    importanceScore: 0.85,
-    impactAnalysis: "Enables click-to-deploy multi-agent loops with automated cost caps, securing corporate adoption."
-  },
-  {
-    id: "news-23",
-    headline: "Adept members join Amazon AGI division to focus on automated browser agents",
-    category: "Enterprise",
-    timestamp: "2 days ago",
-    source: "TechCrunch",
-    importanceScore: 0.82,
-    impactAnalysis: "Consolidates talent pool around web-browsing automation as the premier enterprise agent focus."
-  },
-  {
-    id: "news-24",
-    headline: "Etched tapeout sovereign ASIC purpose-built for ultra-low latency Transformer serving",
-    category: "Research",
-    timestamp: "3 days ago",
-    source: "NextPlatform",
-    importanceScore: 0.89,
-    impactAnalysis: "Reduces processing latencies by 20x compared to standard legacy general-use GPU units."
-  },
-  {
-    id: "news-25",
-    headline: "Poolside AI relocates computational engines to France, raising $500M series B",
-    category: "Startups",
-    timestamp: "3 days ago",
-    source: "Les Echos",
-    importanceScore: 0.84,
-    impactAnalysis: "Showcases growing European computational investment, leveraging sovereign clean nuclear power."
-  },
-  {
-    id: "news-26",
-    headline: "Twelve Labs launches multi-modal video search engine focusing on complex audio alignment",
-    category: "Startups",
-    timestamp: "3 days ago",
-    source: "SiliconAngle",
-    importanceScore: 0.81,
-    impactAnalysis: "Solves cross-modal video search and indexing hurdles across vast enterprise media libraries."
-  },
-  {
-    id: "news-27",
-    headline: "Character.AI pivots toward deep voice synthesis & high-fidelity low-latency conversational tools",
-    category: "Enterprise",
-    timestamp: "4 days ago",
-    source: "Wired",
-    importanceScore: 0.80,
-    impactAnalysis: "Highlights shift from text chatbots to sensory rich persistent speech agents."
-  },
-  {
-    id: "news-28",
-    headline: "IEEE publishes universal standard proposal detailing safety controls for physical robot agents",
-    category: "Robotics",
-    timestamp: "4 days ago",
-    source: "IEEE Org",
-    importanceScore: 0.85,
-    impactAnalysis: "Unifies safety protocols across different factory automations, smoothing insurance ratings."
-  },
-  {
-    id: "news-29",
-    headline: "Tencent releases Hunyuan-3D open model, streamlining high-fidelity video asset creation",
-    category: "Models",
-    timestamp: "4 days ago",
-    source: "China Tech News",
-    importanceScore: 0.81,
-    impactAnalysis: "Democratizes 3D asset generation workflows, reducing creative asset design cost by 70%."
-  },
-  {
-    id: "news-31",
-    headline: "Cleanlab publishes findings on automated label cleaning structures in multi-trillion token corp sets",
-    category: "Research",
-    timestamp: "5 days ago",
-    source: "Arxiv Brief",
-    importanceScore: 0.83,
-    impactAnalysis: "Proves systematic data sanitization increases basic model precision without increasing computational size."
+    "id": "news-15",
+    "headline": "What happens when an AI-native insurer enters the EU?",
+    "category": "Startups",
+    "timestamp": "1 hr ago",
+    "source": "Hacker News",
+    "importanceScore": 0.02,
+    "impactAnalysis": "The entry of AI-native insurance companies into regulated markets like the EU signifies a significant shift in how AI is being applied to traditional industries, promising efficiency and new risk assessment models.",
+    "url": "https://sarah-robin.com/blog/dachshund"
   }
 ];
