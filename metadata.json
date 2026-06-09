@@ -1,0 +1,6 @@
+{
+  "name": "AI Command Center",
+  "description": "Executive intelligence and operations command center aggregating global AI market metrics, live news feeds, research radars, and company tracking in a Bloomberg-inspired premium dark display.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

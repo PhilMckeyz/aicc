@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-cmd-bg: #0B0F14;
+  --color-cmd-surface: #131A22;
+  --color-cmd-border: #253041;
+  --color-cmd-primary: #00D4FF;
+  --color-cmd-positive: #00E676;
+  --color-cmd-warning: #FFC857;
+  --color-cmd-negative: #FF5C5C;
+  --color-cmd-card: #131A22;
+  
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-cmd-bg);
+    color: #E2E8F0;
+    font-family: var(--font-sans);
+  }
+}
+
+/* Continuously Scrolling Ticker Animation */
+@keyframes ticker-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-33.3333%, 0, 0);
+  }
+}
+
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 45s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Webkit Scrollbar Styling for Terminal / Bloomberg look */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0F14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #253041;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00D4FF;
+}
+
+/* Custom glow effects and terminal scan lines */
+.glow-primary {
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+}
+
+.glow-positive {
+  text-shadow: 0 0 10px rgba(0, 230, 118, 0.4);
+}
+
+.border-glow:hover {
+  border-color: #00D4FF;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.1);
+}
+
+/* Status pulses */
+@keyframes status-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.15);
+  }
+}
+
+.animate-pulse-slow {
+  animation: status-pulse 2s infinite ease-in-out;
+}
